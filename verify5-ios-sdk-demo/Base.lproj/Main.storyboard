@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvk-uc-TLS">
+                                <rect key="frame" x="0.0" y="164" width="414" height="40"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.49019607840000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qsk-tS-Yyl"/>
+                                </constraints>
+                                <state key="normal" title="显示图形验证码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showsdk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mga-oU-p2W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXf-E1-rny">
+                                <rect key="frame" x="0.0" y="214" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1l2-G9-pMN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJH-nS-mOX">
+                                <rect key="frame" x="0.0" y="235" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fDs-eI-28v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9lg-Hy-VT2">
+                                <rect key="frame" x="0.0" y="108" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.49019607840000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="5ub-sS-9hv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="中文"/>
+                                    <segment title="英文"/>
+                                    <segment title="繁体"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="seg:" destination="BYZ-38-t0r" eventType="valueChanged" id="spD-qD-dSj"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tXf-E1-rny" secondAttribute="trailing" id="7Es-kg-e3I"/>
+                            <constraint firstItem="tXf-E1-rny" firstAttribute="top" secondItem="fvk-uc-TLS" secondAttribute="bottom" constant="10" id="ATT-gy-AZR"/>
+                            <constraint firstItem="9lg-Hy-VT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Qja-bg-vb6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MJH-nS-mOX" secondAttribute="trailing" id="SQF-q3-KS5"/>
+                            <constraint firstItem="fvk-uc-TLS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XBL-bw-SI9"/>
+                            <constraint firstItem="MJH-nS-mOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YJC-q1-JTZ"/>
+                            <constraint firstItem="MJH-nS-mOX" firstAttribute="top" secondItem="tXf-E1-rny" secondAttribute="bottom" id="Zhs-V9-gFA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lg-Hy-VT2" secondAttribute="trailing" id="b5k-ht-yUy"/>
+                            <constraint firstItem="9lg-Hy-VT2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fiL-5z-MVb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fvk-uc-TLS" secondAttribute="trailing" id="lp8-gb-6NZ"/>
+                            <constraint firstItem="tXf-E1-rny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rXD-mq-kay"/>
+                            <constraint firstItem="fvk-uc-TLS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="zZ3-R6-hRA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="res" destination="MJH-nS-mOX" id="ggq-K1-Uda"/>
+                        <outlet property="seg" destination="9lg-Hy-VT2" id="Fxb-tu-ZfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="64"/>
+        </scene>
+    </scenes>
+</document>

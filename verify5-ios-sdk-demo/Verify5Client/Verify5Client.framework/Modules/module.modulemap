@@ -1,0 +1,6 @@
+framework module Verify5Client {
+  umbrella header "Verify5Client.h"
+
+  export *
+  module * { export * }
+}
